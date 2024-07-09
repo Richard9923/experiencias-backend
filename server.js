@@ -3,4 +3,11 @@ require('dotenv').config();
 const express = require('express');
 const PORT = process.env.PORT || 3000;
 
-const app = 
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Hello World')
+})
+app.listen(PORT, (req, res) => {
+    console.log(`The server is running on PORT: ${PORT}`);
+})
